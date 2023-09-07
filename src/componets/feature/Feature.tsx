@@ -1,7 +1,14 @@
 import React from 'react';
 import './feature.css';
 
-const Feature = ({ title, text }) => (
+interface Props {
+  title: string;
+  text: string;
+}
+
+const Feature = ({ title, text }: Props) => {
+
+  return(
   <div className="gpt3__features-container__feature">
     <div className="gpt3__features-container__feature-title">
       <div />
@@ -11,6 +18,7 @@ const Feature = ({ title, text }) => (
       <p>{text}</p>
     </div>
   </div>
-);
+  );
+};
 
 export default Feature;
